@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+<body>
+	<a-scene embedded arjs='sourceType: webcam'>
+		<a-assets>
+			<a-asset-item id="assetAframe" src="https://github.com/jeromeetienne/AR.js/blob/master/aframe/examples/demo-aframe-logo/models/ply/pikachu.ply"></a-asset-item>
+		</a-assets>
 
-<!-- to load .ply model -->
-<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+		<!-- <a-marker type='unknown'> -->
+		<a-entity ply-model="src: #assetAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <body>
 	<a-scene embedded arjs='sourceType: webcam'>
@@ -18,4 +40,3 @@
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
-</html>
